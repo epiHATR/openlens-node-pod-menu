@@ -8,6 +8,8 @@ import { NodeMenu } from "./src/node-menu";
 import { PodAttachMenu } from "./src/attach-menu";
 import { PodShellMenu } from "./src/shell-menu";
 import { PodLogsMenu } from "./src/logs-menu";
+import { FavMenu } from "./src/fav-menu";
+
 import React from "react";
 
 export default class PodMenuRendererExtension extends Renderer.LensExtension {
@@ -38,6 +40,13 @@ export default class PodMenuRendererExtension extends Renderer.LensExtension {
       apiVersions: ["v1"],
       components: {
         MenuItem: (props: Renderer.Component.KubeObjectMenuProps<Renderer.K8sApi.Pod>) => <PodLogsMenu {...props} />,
+      },
+    },
+    {
+      kind: "Pod",
+      apiVersions: ["v1"],
+      components: {
+        MenuItem: (props: Renderer.Component.KubeObjectMenuProps<Renderer.K8sApi.Pod>) => <FavMenu {...props} />,
       },
     },
   ];
