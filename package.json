@@ -1,6 +1,6 @@
 {
   "name": "@epihatr/openlens-node-pod-menu",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Node and pod menus for OpenLens",
   "repository": {
     "type": "git",

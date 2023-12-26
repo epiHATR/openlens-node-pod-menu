@@ -44,11 +44,11 @@ export class FavMenu extends React.Component<Renderer.Component.KubeObjectMenuPr
     return (
       <MenuItem onClick={Util.prevDefault(() => this.showLogs(containers[0]))}>
         <Icon
-          material="subject"
+          material="favorite"
           interactive={toolbar}
-          tooltip={toolbar && "Pod Logs"}
+          tooltip={toolbar && "Favorite this pod"}
         />
-        <span className="title">Favorite</span>
+        <span className="title">Yêu anh Hai</span>
         {containers.length > 1 && (
           <>
             <Icon className="arrow" material="keyboard_arrow_right"/>
